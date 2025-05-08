@@ -1,0 +1,132 @@
+<!DOCTYPE html><html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Steilhaus AG 1958</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    header {
+      background-color: #fff;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .email-info {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 50px 20px;
+      text-align: center;
+      background-image: url('https://source.unsplash.com/1600x600/?construction');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+    }
+    .section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    .service-box {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    .database-check {
+      margin-top: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+    footer {
+      font-size: 0.8rem;
+      color: #777;
+      text-align: left;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="email-info">Kontakt: <strong>Steilhaus1958@gmail.com</strong></div>
+    <nav>
+      <a href="#services">Unsere Leistungen</a>
+      <a href="#gallery">Galerie</a>
+      <a href="#database">Mitarbeiter-Check</a>
+    </nav>
+  </header>  <div class="hero">
+    Steilhaus AG – Bauqualität seit 1958
+  </div>  <section class="section" id="services">
+    <h2>Unsere Bauleistungen</h2>
+    <div class="services">
+      <div class="service-box">
+        <h3>Neubau</h3>
+        <p>Wohn- und Geschäftsbauten nach modernsten Standards.</p>
+      </div>
+      <div class="service-box">
+        <h3>Renovierungen</h3>
+        <p>Sanierungen und Umbauten bestehender Gebäude mit Liebe zum Detail.</p>
+      </div>
+      <div class="service-box">
+        <h3>Innenausbau</h3>
+        <p>Innenraumgestaltung von Trockenbau bis Böden.</p>
+      </div>
+      <div class="service-box">
+        <h3>Aussenanlagen</h3>
+        <p>Gartenmauern, Terrassen, Pflasterungen und mehr.</p>
+      </div>
+    </div>
+  </section>  <section class="section" id="gallery">
+    <h2>Bilder unserer Arbeiten</h2>
+    <img src="https://source.unsplash.com/800x400/?house,build" alt="Hausbau" style="width:100%; border-radius: 8px; margin-top:20px;">
+    <img src="https://source.unsplash.com/800x400/?renovation" alt="Renovierung" style="width:100%; border-radius: 8px; margin-top:20px;">
+  </section>  <section class="section" id="database">
+    <h2>Mitarbeiter-Datenbank</h2>
+    <div class="database-check">
+      <label for="name">Name eingeben:</label>
+      <input type="text" id="name" placeholder="z.B. Oleksandr Dryshchuk">
+      <button onclick="checkName()">Prüfen</button>
+      <p id="result"></p>
+    </div>
+  </section>  <footer>
+    Hinweis: Bitte schreiben Sie an <strong>Steilhaus1958@gmail.com</strong>, da unsere Telefonlinie momentan nicht aktiv ist.
+  </footer>  <script>
+    function checkName() {
+      const name = document.getElementById('name').value.trim();
+      const result = document.getElementById('result');
+
+      if (name.toLowerCase() === 'oleksandr dryshchuk') {
+        result.innerHTML = 'Ja, Oleksandr Dryshchuk hat im Sommer 2024 (ca. 2-3 Monate) bei uns gearbeitet. Herkunft: Ukraine. Geburtsjahr: 2007. Bewertung: Sehr zuverlässiger Mitarbeiter.';
+      } else {
+        result.innerHTML = 'Keine Daten zu diesem Namen gefunden.';
+      }
+    }
+  </script></body>
+</html>
